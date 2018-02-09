@@ -1,2 +1,5 @@
-# proverbios
-Todos os provérbios populares portugueses
+# Provérbios Portugueses
+
+Todos os provérbios populares portugueses.
+
+[MIT - André Varandas](LICENSE)
