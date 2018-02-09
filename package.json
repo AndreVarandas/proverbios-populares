@@ -1,0 +1,43 @@
+{
+  "name": "proverbios-portugueses",
+  "version": "0.0.0-semantically-released",
+  "main": "src/index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "mocha src/index.test.js -w",
+    "test:single": "istanbul cover -x *.test.js _mocha  -- -R spec src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": "https://github.com/AndreVarandas/proverbios.git",
+  "keywords": [
+    "random",
+    "proverbios",
+    "populares",
+    "portugueses"
+  ],
+  "author": "Andre Varandas <andre.m.varandas@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "codecov.io": "^0.1.6",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "ghooks": "^2.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "semantic-release": "^12.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+        "pre-commit": "npm run test:single && npm run check-coverage"
+      }
+  }
+}
