@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "check-coverage": "node ./node_modules/.bin/istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "test": "mocha src/index.test.js -w",
     "test:single": "istanbul cover -x *.test.js _mocha  -- -R spec src/index.test.js",
