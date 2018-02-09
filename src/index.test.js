@@ -22,7 +22,7 @@ describe('proverbios populares portugueses', () => {
   });
 
   describe('containing words', () => {
-    it('should return a proverb that containing the passed words', () => {
+    it('should return a proverb that contains the passed words', () => {
       const proverbsWithDeus = proverbios.containing('deus');
       expect(proverbsWithDeus).to.have.length(21);
     });
