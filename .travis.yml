@@ -3,13 +3,17 @@ language: node_js
 cache:
   directories:
     - node_modules
+    - ~/.npm
 branches:
   only:
     - master
 notifications:
   email: false
 node_js:
-  - 'stable'
+  - '9'
+  - '8'
+  - '6'
+  - '4'
 before_script:
   - npm prune
   - npm install
@@ -18,4 +22,7 @@ script:
   - npm run check-coverage
 after_success:
   - npm run report-coverage
-  - npm run semantic-release
+  - npm run travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
