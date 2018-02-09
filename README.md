@@ -7,8 +7,6 @@ Todos os provérbios populares portugueses.
 ### Usage
 `$ npm install --save proverbios-portugueses`
 
-![](extra/demo.png)
-
 ```javascript
 const proverbios = require('proverbios-portugueses');
 
