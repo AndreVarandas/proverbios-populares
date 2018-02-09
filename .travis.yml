@@ -12,6 +12,7 @@ node_js:
   - 'stable'
 before_script:
   - npm prune
+  - npm install
 script:
   - npm run test:single
   - npm run check-coverage
