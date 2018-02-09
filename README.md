@@ -1,4 +1,4 @@
-# Provérbios Portugueses
+# Provérbios Populares Portugueses
 
 Todos os provérbios populares portugueses.
 
